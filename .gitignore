@@ -1,0 +1,4 @@
+.cache
+CMakeLists.txt.*
+build*
+

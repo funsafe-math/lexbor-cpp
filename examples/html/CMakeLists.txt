@@ -4,7 +4,7 @@ set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -fsanitize=address)
 
 file(GLOB APP_SOURCES *.cpp)
 foreach(testsourcefile ${APP_SOURCES})
-  # simple string replace cuts off ".cpp"
+  # testcase name is filename without extension
   string(REPLACE ".cpp" "" testname ${testsourcefile})
   add_executable(${testname} ${testsourcefile})
   target_link_libraries(${testname} lexbor_wrapper lexbor)
